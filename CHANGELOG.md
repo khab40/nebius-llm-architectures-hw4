@@ -8,6 +8,7 @@
 - Converted [`src/bon_p2_forward.ipynb`](src/bon_p2_forward.ipynb) to run the custom forward-pass framework on Torch tensors with `mps`/`cuda`/`cpu` device selection.
 - Replaced copied architecture notes with source-derived docs under [`docs/architecture/`](docs/architecture/index.md).
 - Updated [`README.md`](README.md) to use the actual notebook filenames and current accelerator/progress behavior.
+- Added generated repository artwork in [`docs/repo-icon.png`](docs/repo-icon.png) and [`docs/repo-banner.png`](docs/repo-banner.png), and embedded it in the README.
 
 ## 2026-04-18
 

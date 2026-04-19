@@ -1,4 +1,12 @@
-# Nebius AI Performance Engineering HW4
+<p align="center">
+  <img src="docs/repo-icon.png" alt="Nebius HW4 repository icon" width="120">
+</p>
+
+<h1 align="center">Nebius AI Performance Engineering HW4</h1>
+
+<p align="center">
+  <img src="docs/repo-banner.png" alt="Funny frog, cat, dog, ship, and dinosaur repository banner" width="720">
+</p>
 
 Standalone VS Code Python project for the HW4 notebooks. The project contains CIFAR-10 classification experiments, a character-level RNN language model, and custom forward/backward neural-network framework notebooks.
 
@@ -13,6 +21,8 @@ Standalone VS Code Python project for the HW4 notebooks. The project contains CI
 - [`src/bon_p2_forward.ipynb`](src/bon_p2_forward.ipynb): custom forward-pass framework using Torch tensors on `mps`/`cuda`/`cpu`.
 - [`src/bon_p1_backward.ipynb`](src/bon_p1_backward.ipynb): custom backward-pass and mini-batch training framework using Torch tensors on `mps`/`cuda`/`cpu`.
 - [`src/notebook_progress.py`](src/notebook_progress.py): shared notebook-friendly progress helper.
+- [`docs/repo-icon.png`](docs/repo-icon.png): square repository icon.
+- [`docs/repo-banner.png`](docs/repo-banner.png): README and social-preview banner artwork.
 - [`docs/architecture/index.md`](docs/architecture/index.md): source-derived architecture notes for the notebooks.
 - [`notebook-audit-report.md`](notebook-audit-report.md): HW4 notebook audit report.
 
@@ -69,3 +79,16 @@ uv run jupyter nbconvert --to notebook --execute src/bon_p1_backward.ipynb --out
 
 The CIFAR-10 and RNN notebooks contain longer training cells; run them intentionally from VS Code or Jupyter Lab when GPU/CPU time is available.
 
+## Repository Artwork
+
+The repository artwork lives in [`docs/repo-icon.png`](docs/repo-icon.png) and [`docs/repo-banner.png`](docs/repo-banner.png). GitHub renders both from this README after the files are committed and pushed.
+
+GitHub does not provide a separate per-repository icon setting. The closest standard web placement is the repository social preview image:
+
+1. Open the repository on GitHub.
+2. Go to **Settings**.
+3. Scroll to **Social preview**.
+4. Upload [`docs/repo-banner.png`](docs/repo-banner.png).
+5. Save the repository description and topics in the **About** panel if needed.
+
+For a square visual identity, keep [`docs/repo-icon.png`](docs/repo-icon.png) in the README or use it in any project page, release notes, or external course submission page.
