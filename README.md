@@ -24,7 +24,6 @@ Standalone VS Code Python project for the HW4 notebooks. The project contains CI
 - [`docs/repo-icon.png`](docs/repo-icon.png): square repository icon.
 - [`docs/repo-banner.png`](docs/repo-banner.png): README and social-preview banner artwork.
 - [`docs/architecture/index.md`](docs/architecture/index.md): source-derived architecture notes for the notebooks.
-- [`notebook-audit-report.md`](notebook-audit-report.md): HW4 notebook audit report.
 
 ## Data
 

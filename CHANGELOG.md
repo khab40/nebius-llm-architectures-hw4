@@ -17,4 +17,3 @@
 - Set up `uv` dependency management with the libraries required by the HW4 notebooks.
 - Added VS Code Python and Jupyter workspace settings.
 - Moved HW4-only local data into project-level `data/`, leaving `weatherAUS.csv` in the original workspace for HW2.
-- Moved HW4 notebook audit artifacts into the new project.
