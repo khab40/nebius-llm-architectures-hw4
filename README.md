@@ -8,22 +8,19 @@
   <img src="docs/repo-banner.png" alt="Funny frog, cat, dog, ship, and dinosaur repository banner" width="720">
 </p>
 
-Standalone VS Code Python project for the HW4 notebooks. The project contains CIFAR-10 classification experiments, a character-level RNN language model, and custom forward/backward neural-network framework notebooks.
+Standalone VS Code Python project for the HW4 notebooks. The project contains merged CIFAR-10 classification experiments, a character-level RNN language model, and custom forward/backward neural-network framework notebooks.
 
 ## Contents
 
-- [`src/CIFAR10.ipynb`](src/CIFAR10.ipynb): original CIFAR-10 task notebook with data loading, binary classifiers, `CIFAR10Dataset`, and multi-class MLP training.
-- [`src/p1_task_1_4_frog_ship_bin.ipynb`](src/p1_task_1_4_frog_ship_bin.ipynb): frog-vs-ship binary CIFAR-10 experiment.
-- [`src/p1_task_1_5_cat_dog_bin.ipynb`](src/p1_task_1_5_cat_dog_bin.ipynb): cat-vs-dog binary CIFAR-10 experiment.
-- [`src/p1_task_3_MCC.ipynb`](src/p1_task_3_MCC.ipynb): multi-class CIFAR-10 MLP experiment.
-- [`src/p1_task_3_CNN.ipynb`](src/p1_task_3_CNN.ipynb): multi-class CIFAR-10 CNN experiment.
-- [`src/p2_RNN_LM.ipynb`](src/p2_RNN_LM.ipynb): character-level dinosaur-name language model.
-- [`src/bon_p2_forward.ipynb`](src/bon_p2_forward.ipynb): custom forward-pass framework using Torch tensors on `mps`/`cuda`/`cpu`.
-- [`src/bon_p1_backward.ipynb`](src/bon_p1_backward.ipynb): custom backward-pass and mini-batch training framework using Torch tensors on `mps`/`cuda`/`cpu`.
+- [`src/homework_CIFAR10.ipynb`](src/homework_CIFAR10.ipynb): main CIFAR-10 notebook with binary frog/ship and cat/dog experiments, `CIFAR10Dataset`, and multi-class MLP sweeps.
+- [`src/homework_CIFAR10_bonus_3_CNN.ipynb`](src/homework_CIFAR10_bonus_3_CNN.ipynb): separate CIFAR-10 CNN experiment for all 10 classes.
+- [`src/RNN_LM_homework.ipynb`](src/RNN_LM_homework.ipynb): character-level dinosaur-name language model with top-k, temperature, and beam-search generation.
+- [`src/Week 4 hometask bonus, forward.ipynb`](src/Week%204%20hometask%20bonus,%20forward.ipynb): custom forward-pass framework using Torch tensors on `mps`/`cuda`/`cpu`.
+- [`src/Week 4 hometask bonus, backward.ipynb`](src/Week%204%20hometask%20bonus,%20backward.ipynb): custom backward-pass and mini-batch training framework using Torch tensors on `mps`/`cuda`/`cpu`.
 - [`src/notebook_progress.py`](src/notebook_progress.py): shared notebook-friendly progress helper.
 - [`docs/repo-icon.png`](docs/repo-icon.png): square repository icon.
 - [`docs/repo-banner.png`](docs/repo-banner.png): README and social-preview banner artwork.
-- [`docs/architecture/index.md`](docs/architecture/index.md): source-derived architecture notes for the notebooks.
+- [`docs/architecture/index.md`](docs/architecture/index.md): source-derived architecture notes for the current notebooks.
 
 ## Data
 
@@ -31,7 +28,7 @@ Local data is kept under `data/` and ignored by git because the files are large 
 
 - `data/cifar-10-batches-py/` and `data/cifar-10-python.tar.gz` for CIFAR-10.
 - `data/dinos.txt` for the RNN language model.
-- `data/MNIST_csv/mnist_train.csv` and `data/MNIST_csv/mnist_test.csv` for the backward-pass image-classification smoke test.
+- `data/MNIST_csv/mnist_train.csv` and `data/MNIST_csv/mnist_test.csv` for the backward-pass image-classification experiment.
 
 The notebooks locate `data/` from the current working directory or its parents, so they work when VS Code starts kernels from either the project root or the `src/` folder.
 
@@ -72,8 +69,8 @@ uv run python -m compileall src
 Execute the shorter bonus notebooks:
 
 ```bash
-uv run jupyter nbconvert --to notebook --execute src/bon_p2_forward.ipynb --output /tmp/bon_p2_forward.executed.ipynb
-uv run jupyter nbconvert --to notebook --execute src/bon_p1_backward.ipynb --output /tmp/bon_p1_backward.executed.ipynb
+uv run jupyter nbconvert --to notebook --execute "src/Week 4 hometask bonus, forward.ipynb" --output /tmp/bonus_forward.executed.ipynb
+uv run jupyter nbconvert --to notebook --execute "src/Week 4 hometask bonus, backward.ipynb" --output /tmp/bonus_backward.executed.ipynb
 ```
 
 The CIFAR-10 and RNN notebooks contain longer training cells; run them intentionally from VS Code or Jupyter Lab when GPU/CPU time is available.

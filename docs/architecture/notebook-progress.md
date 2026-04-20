@@ -21,5 +21,4 @@ The helper solves two practical notebook problems:
 - uses CSS markers for notebook frontends and an `ipywidgets.Output` container for widget progress;
 - supports `HW4_TQDM_BACKEND=std` to force the text backend.
 
-The CIFAR-10 and RNN training notebooks import this helper by locating the project `src/` directory from the current working directory or its parents, then running `from notebook_progress import tqdm`.
-
+The CIFAR-10, RNN, and bonus training notebooks import this helper by locating the project `src/` directory from the current working directory or its parents, then running `from notebook_progress import tqdm`.
